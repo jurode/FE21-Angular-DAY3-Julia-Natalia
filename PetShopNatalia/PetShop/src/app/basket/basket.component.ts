@@ -10,7 +10,7 @@ export class BasketComponent implements OnInit {
 
   productsInCart;
 
-  constructor(private shoppingCartService : ShoppingCartService) { }
+  constructor(private shoppingCartService: ShoppingCartService) { }
 
   ngOnInit(): void {
     this.productsInCart = this.shoppingCartService.getProducts();

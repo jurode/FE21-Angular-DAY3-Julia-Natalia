@@ -1,1 +1,9 @@
-<p>basket works!</p>
+<p>basket working</p>
+
+<h3>Cart</h3>
+
+
+<div class="cart-item" *ngFor="let item of productsInCart">
+  <span>{{ item.productName }} </span>
+  <span>{{ item.price | currency }}</span>
+</div>
