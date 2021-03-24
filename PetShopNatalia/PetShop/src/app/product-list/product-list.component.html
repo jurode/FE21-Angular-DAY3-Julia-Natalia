@@ -1,12 +1,14 @@
-<!-- creating the html layout for displaying the products -->>
+<!-- creating the html layout for displaying the products -->
 
-<h2 class="text-center"> The best products for your pet</h2>
+<h2 class="text-center">The best products for your pet</h2>
 <div class="row row-cols-1 row-cols-md-3 g-4 pt-4 pb-4">
-  <div class="col" *ngFor="let product of products">
+  <div class="col" *ngFor="let product of products ; index as productId">
     <div class="card">
       <img src="{{product.img}}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">{{product.productName}}</h5>
+        <a routerLink="product-details/{{productId}}">
+          <h5 class="card-title">{{product.productName}}</h5>
+        </a>
         <p class="card-text">Animal type: {{product.animalSpecies}}</p>
         <p class="card-text">Product type: {{product.productType}}</p>
         <p class="card-text" *ngIf="product.weight">Weight: {{product.weight}} g.</p> <!-- add an if statement => if weight empty, do not display -->
