@@ -21,7 +21,7 @@ export class ProductDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private shoppingCartService: ShoppingCartService) { }
 
   addProductsToCart(product) {
-    window.alert('You added {{product.name}} to your cart');
+    window.alert(`You added a product to your cart`);
     this.shoppingCartService.addProductsToCart(product);
   }
   ngOnInit(): void {
