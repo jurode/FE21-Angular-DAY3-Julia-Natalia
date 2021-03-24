@@ -22,6 +22,12 @@ export class ShoppingCartService {
     return this.productsInCart;
   }
 
+  // create function to see the numbers of items in the shopping cart
+  productsInCartLength() {
+    console.log(this.productsInCart.length);
+    return this.productsInCart.length;
+  }
+
   // create function to remove the items from the cart and return an empty cart
   clearCart() {
     this.productsInCart = [];
