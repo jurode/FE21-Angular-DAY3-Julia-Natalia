@@ -27,5 +27,4 @@ export class ShoppingCartService {
     this.productsInCart = [];
     return this.productsInCart;
   }
-
 }
