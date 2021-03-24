@@ -13,6 +13,7 @@
         <p class="card-text">Product type: {{product.productType}}</p>
         <p class="card-text" *ngIf="product.weight">Weight: {{product.weight}} g.</p> <!-- add an if statement => if weight empty, do not display -->
         <p class="card-text">Price {{product.price | currency}}</p>
+        <button type="button" class="btn btn-outline-success" (click)="addProductsToCart(product)">Add to cart</button>
       </div>
     </div>
   </div>
