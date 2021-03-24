@@ -41,4 +41,4 @@ export const productsAll = [
 //    weight: '900',
     price: 4.99
   }
-]
+];
