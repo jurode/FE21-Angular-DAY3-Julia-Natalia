@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class ShoppingCartService {
 
   productsInCart = []; // create a empty array where each product will be temporarily saved -- until checkout or cleared
+  total;
 
   constructor() { }
 
@@ -33,4 +34,5 @@ export class ShoppingCartService {
     this.productsInCart = [];
     return this.productsInCart;
   }
+
 }
