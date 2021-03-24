@@ -7,10 +7,10 @@
       <img src="{{product.img}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{product.productName}}</h5>
-        <p class="card-text">{{product.animalSpecies}}</p>
-        <p class="card-text">{{product.productType}}</p>
-        <p class="card-text">{{product.weight}} g.</p> <!-- TO-DO LATER: add an if statement => if weight empty, do not display -->
-        <p class="card-text">{{product.price | currency}}</p>
+        <p class="card-text">Animal type: {{product.animalSpecies}}</p>
+        <p class="card-text">Product type: {{product.productType}}</p>
+        <p class="card-text" *ngIf="product.weight">Weight: {{product.weight}} g.</p> <!-- add an if statement => if weight empty, do not display -->
+        <p class="card-text">Price {{product.price | currency}}</p>
       </div>
     </div>
   </div>
