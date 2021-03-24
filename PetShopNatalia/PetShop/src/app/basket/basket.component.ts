@@ -14,14 +14,6 @@ export class BasketComponent implements OnInit, DoCheck {
 
   constructor(private shoppingCartService: ShoppingCartService) { }
 
-  sumPrice = function(products) {
-    var total = 0;
-    this.productsInCart.forEach(products,function(value,index){
-      total += parseFloat(value.price);
-    }); 
-    return total.toFixed(2);
-  };
-
   ngOnInit(): void {
     this.productsInCart = this.shoppingCartService.getProducts();
   }
