@@ -1,0 +1,30 @@
+<h3>Cart</h3>
+<div class="row">
+    <span class="col-6 fw-bold border-bottom">Item</span>
+    <span class="col-4 fw-bold border-bottom text-center">Quantity</span>
+    <span class="col-2 fw-bold border-bottom text-end">Price</span>
+</div>
+
+<div class="cart-item row" *ngFor="let item of items">
+    <span class="col-6">{{ item.name }} </span>
+    <span class="col-4 text-center">
+        <span class="text-white rounded-circle bg-danger px-1">&#10134;</span>
+        <span class="text-center mx-3" id="itemQtt">1</span>
+        <span class="text-white rounded-circle bg-success px-1">&#10133;</span>
+    </span>
+    <span class="col-2 text-end">{{ item.price }} €</span>
+</div>
+
+<hr class="mt-5">
+<h3>Checkout</h3>
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+    <div class="row">
+        <label for="name" class="col-2">Name:</label>
+        <input id="name" type="text" formControlName="name" class="col-4">
+    </div>
+    <div class="row">
+        <label for="address" class="col-2">Address:</label>
+        <input id="address" type="text" formControlName="address" class="col-4">
+    </div>
+    <button class="button btn btn-success mt-2" type="submit">Purchase</button>
+</form>

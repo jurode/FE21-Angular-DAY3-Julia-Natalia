@@ -1,0 +1,16 @@
+<h2> Our Products</h2>
+<div class="container d-flex flex-wrap">
+    <!-- # loop through producs: -->
+    <div class="card m-2 d-flex flex-column justify-content-between" 
+        *ngFor="let product of products; index as productId">
+        <h3 class="card-title">{{ product.name }}</h3>
+        <div class="small fst-italic">{{product.animal}} | {{product.category}}</div>
+        <div class="fw-bold">{{product.price}} €</div>
+        <!-- <img src="{{product.img}}" alt=""> -->
+        <img class="align-self-center" src="https://www.flaticon.com/svg/vstatic/svg/2324/2324723.svg?token=exp=1616581473~hmac=5bac3fdf58e10059c1b7186c9cfea8e0" alt="">
+        <button class="btn btn-primary mt-1">
+            <a routerLink="products/{{productId}}" class="text-white text-decoration-none">see Details</a>
+        </button>
+    </div>
+
+</div>
