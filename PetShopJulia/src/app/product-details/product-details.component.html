@@ -1,0 +1,11 @@
+<h2>Product Details</h2>
+<hr>
+
+<div *ngIf="product" class="">
+    <h3>{{ product.name }}</h3>
+    <h4>{{ product.price }} €</h4>
+    <p>{{ product.description }}</p>
+    <img class="align-self-center" src="https://www.flaticon.com/svg/vstatic/svg/2324/2324723.svg?token=exp=1616581473~hmac=5bac3fdf58e10059c1b7186c9cfea8e0" alt="">
+    <br>
+    <button (click)="addToCart(product)" class="btn btn-primary mt-4">Buy</button>
+</div>
