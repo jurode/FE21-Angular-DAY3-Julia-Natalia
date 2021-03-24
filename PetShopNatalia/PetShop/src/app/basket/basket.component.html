@@ -1,7 +1,7 @@
 <!-- creating layout for basket -->
-<div class="container ">
-  <h3 class="text-center pt-4 mt-4 pb-4">Summary of your order</h3>
-  <ul class="list-group pb-1 mb-1">
+<div class="container shadow-lg rounded mt-4 mb-5 pb-5">
+  <h2 class="text-center text-light textShadow pt-3 pb-3">Summary of your order</h2>
+  <ul class="list-group pb-1 mb-1 shadow">
     <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let product of productsInCart">
       <span class="badge bg-primary">{{ product.productName }}</span>
       <span class="badge bg-primary">{{ product.price.toFixed(2) | currency }}</span>

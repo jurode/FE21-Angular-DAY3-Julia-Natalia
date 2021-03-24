@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+.bg-image {
+  background: url(assets/img/sincerely-media-gPnHi8AmO5k-unsplash.jpg) no-repeat center right fixed;
+  height: 70vh;
+  -webkit-background-cover: cover ;
+  -moz-background-cover: cover ;
+  -o-background-cover: cover ;
+  background-size: cover; 
+}
+
+.textShadow {
+  text-shadow: 2px 2px 5px #333;
+}
