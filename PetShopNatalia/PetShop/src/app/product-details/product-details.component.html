@@ -1,12 +1,21 @@
 <!-- create the layout for the product details page -->
-<div class="container card pb-4 pt-4 mt-4 mb-4">
-  <div class="card-body" *ngIf="product">
-    <h5 class="card-title">{{product.productName}}</h5>
-    <p class="card-text">Animal type: {{product.animalSpecies}}</p>
-    <p class="card-text">Product type: {{product.productType}}</p>
-    <p class="card-text" *ngIf="product.weight">Weight: {{product.weight}} g.</p> <!-- add an if statement => if weight empty, do not display -->
-    <p class="card-text">Price {{product.price | currency}}</p>
-    <button type="button" class="btn btn-outline-success" (click)="addProductsToCart(product)">Add to cart</button>
+
+<div class="container">
+  <div class="card m-3">
+    <div class="row g-0">
+      <div class="col-md-6">
+        <img src="{{product.img}}" class="card-img-bottom" alt="...">
+      </div>
+      <div class="col-md-3">
+        <div class="card-body">
+          <h5 class="card-title">{{product.productName}}</h5>
+          <p class="card-text">Animal type: {{product.animalSpecies}}</p>
+          <p class="card-text">Product type: {{product.productType}}</p>
+          <p class="card-text" *ngIf="product.weight">Weight: {{product.weight}} g.</p> <!-- add an if statement => if weight empty, do not display -->
+          <p class="card-text">Price {{product.price | currency}}</p>
+          <button type="button" class="btn btn-outline-success" (click)="addProductsToCart(product)">Add to cart</button>
+        </div>
+      </div>
+    </div>
   </div>
-  <img src="{{product.img}}" class="card-img-bottom" alt="...">
 </div>
