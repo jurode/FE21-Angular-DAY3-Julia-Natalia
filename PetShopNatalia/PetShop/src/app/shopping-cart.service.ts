@@ -14,6 +14,7 @@ export class ShoppingCartService {
   // create function to add items to cart
   addProductsToCart(product) {
     this.productsInCart.push(product);
+    console.log(this.productsInCart)
   }
 
   // create function to add products to the cart and to return each product with its quantity
@@ -26,4 +27,5 @@ export class ShoppingCartService {
     this.productsInCart = [];
     return this.productsInCart;
   }
+
 }
