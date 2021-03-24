@@ -31,7 +31,5 @@ export class ProductDetailsComponent implements OnInit {
     })
     console.log(this.product) // returns object of productsAll[index]
     console.log(productsAll) // returns an array with all objects 
-
   }
-
 }
