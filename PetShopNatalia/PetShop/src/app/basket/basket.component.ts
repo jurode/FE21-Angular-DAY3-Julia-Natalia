@@ -11,11 +11,13 @@ export class BasketComponent implements OnInit, DoCheck {
 
   productsInCart;
   basketLength;
+  cartTotal: number = 0;
 
   constructor(private shoppingCartService: ShoppingCartService) { }
 
   ngOnInit(): void {
     this.productsInCart = this.shoppingCartService.getProducts();
+    this.cartTotal = this.shoppingCartService.getTotal();
   }
 
   ngDoCheck() {

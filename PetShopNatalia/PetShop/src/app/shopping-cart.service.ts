@@ -29,6 +29,10 @@ export class ShoppingCartService {
     return this.productsInCart.length;
   }
 
+  getTotal() : number {
+    return this.productsInCart.reduce((acc, ele) => acc + ele.price, 0);
+  }
+
   // create function to remove the items from the cart and return an empty cart
   clearCart() {
     this.productsInCart = [];

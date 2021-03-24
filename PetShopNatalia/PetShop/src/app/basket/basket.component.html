@@ -3,13 +3,13 @@
 <ul class="list-group pb-1 mb-1">
   <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let product of productsInCart">
     <span class="badge bg-primary">{{ product.productName }}</span>
-    <span class="badge bg-primary">{{ product.price }}</span>
+    <span class="badge bg-primary">{{ product.price.toFixed(2) | currency }}</span>
   </li>
 </ul>
 <ul class="list-group pb-4 mb-4">
   <li class="list-group-item d-flex justify-content-between align-items-center">
     <span class="badge bg-primary">Total to pay</span>
-    <span class="badge bg-primary"></span> <!-- when I know how, I'll add the totalSum of the items in the cart -->
+    <span class="badge bg-primary">{{ cartTotal.toFixed(2) | currency }}</span> <!-- when I know how, I'll add the totalSum of the items in the cart -->
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-center">
     <span class="badge bg-primary">Total No. of products</span>
