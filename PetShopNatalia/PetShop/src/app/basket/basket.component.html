@@ -1,9 +1,8 @@
-<p>basket working</p>
-
-<h3>Cart</h3>
-
-
-<div class="cart-item" *ngFor="let item of productsInCart">
-  <span>{{ item.productName }} </span>
-  <span>{{ item.price | currency }}</span>
-</div>
+<!-- creating layout for basket -->
+<h3 class="text-center pt-4 mt-4 pb-4">Summary of your order</h3>
+<ul class="list-group pb-4 mb-4" *ngFor="let product of productsInCart">
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    <span class="badge bg-primary">{{product.productName}}</span>
+    <span class="badge bg-primary">{{product.price}}</span>
+  </li>
+</ul>
